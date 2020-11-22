@@ -1,6 +1,7 @@
 body {
     background-color: #010165;
     margin: 0px;
+    font-family: 'Work Sans';
 }
   
 header {
@@ -18,7 +19,6 @@ header {
     display: inline;
     font-size: 18px;
     color: #00ffff;
-    font-family: 'Work Sans';
 }
 
 .instructions-row {
@@ -28,14 +28,12 @@ header {
 
 .instructions-number {
     padding-right: 25px;
-    font-family: 'Work Sans';
     font-size: 36px;
     color: #00ffff;
 }
 
 .instructions-text {
     padding: 10px;
-    font-family: 'Work Sans';
     font-size: 14px;
     color: #fff;
 }
@@ -53,7 +51,6 @@ header {
     margin: auto;
     width: 120px;
     height: 60px;
-    font-family: 'Work Sans';
     background-color: #00ffff;
     font-size: 18px;
     text-align: center;
@@ -63,4 +60,23 @@ header {
     display: block;
     border-radius: 10px;
     font-weight: bold;
+}
+
+.streaks {
+    display: flex;
+    justify-content: space-around;
+    width: 360px;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.streak-nums {
+    background-color: black;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    line-height: 60px;
+    margin: auto;
 }

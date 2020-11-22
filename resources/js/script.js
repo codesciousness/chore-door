@@ -2,12 +2,16 @@ const doorImage1 = document.getElementById('door1');
 const doorImage2 = document.getElementById('door2');
 const doorImage3 = document.getElementById('door3');
 const startButton = document.getElementById('start');
+const currentStreak = document.getElementById('current-streak-num');
+const bestStreak = document.getElementById('best-streak-num');
 const botDoorPath = "https://content.codecademy.com/projects/chore-door/images/robot.svg";
 const beachDoorPath = "https://content.codecademy.com/projects/chore-door/images/beach.svg";
 const spaceDoorPath = "https://content.codecademy.com/projects/chore-door/images/space.svg";
 const closedDoorPath = "https://content.codecademy.com/projects/chore-door/images/closed_door.svg";
 let currentlyPlaying = true;
 let numClosedDoors = 3;
+let currentStreakNum = 0;
+let bestStreakNum = 0;
 let openDoor1;
 let openDoor2;
 let openDoor3;
@@ -99,9 +103,17 @@ startButton.onclick = () => {
 function gameOver(status) {
     if(status === 'win') {
         startButton.innerHTML = 'You win! Play again?';
+        currentStreakNum++;
+        currentStreak.innerText = currentStreakNum;
+        if(currentStreakNum > bestStreakNum) {
+            bestStreakNum++;
+            bestStreak.innerText = bestStreakNum;
+        }
     }
     else {
         startButton.innerHTML = 'Game over! Play again?';
+        currentStreakNum = 0;
+        currentStreak.innerText = currentStreakNum;
     }
     currentlyPlaying = false;
 }
